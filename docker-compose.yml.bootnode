@@ -1,0 +1,22 @@
+version: '2.0'
+services:
+
+  bootnode:
+    build: bubble_geth
+    restart: on-failure
+    container_name: bubble_geth
+    ports:
+      - 31333:31333
+      - 8538:8538
+    networks:
+      app_net:
+        ipv4_address: 192.168.10.20
+
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 192.168.10.1/24
+        gateway: 192.168.10.1
