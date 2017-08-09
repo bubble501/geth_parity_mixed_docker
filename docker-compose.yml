@@ -16,7 +16,7 @@ services:
   parity0:
     build: bubble_parity
     restart: on-failure
-    container_name: parity
+    container_name: bubble_parity
     command:
       --chain /bubble_parity/parity.json
       --port 31337

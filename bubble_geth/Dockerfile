@@ -1,6 +1,6 @@
 FROM ethereum/client-go:v1.6.5
 
-RUN apk update && apk add bash
+
 
 RUN mkdir /ethereum
 
